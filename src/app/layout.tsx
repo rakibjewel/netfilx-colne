@@ -1,8 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Roboto_Slab } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto_Slab({ subsets: ['latin'], display: 'swap', })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +16,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+<link
+  rel="icon"
+  href="/icon?<generated>"
+  type="image/<generated>"
+  sizes="<generated>"
+/>
+<link
+  rel="apple-touch-icon"
+  href="/apple-icon?<generated>"
+  type="image/<generated>"
+  sizes="<generated>"
+/>
+      <body className={roboto.className}>{children}</body>
     </html>
   )
 }
